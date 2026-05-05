@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acne Laser Treatment in Las Vegas, NV | Via Laser</title>
+  <meta name="description" content="Clear acne and smooth your skin with Via Laser's treatment. $99 single session or 3 sessions for $299. Las Vegas, NV." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Meta (Facebook) Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1178133073434960');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1178133073434960&ev=PageView&noscript=1"/></noscript>
+
+  <!-- GoHighLevel form embed script -->
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</head>
+<body>
+
+  <!-- Top announcement bar -->
+  <div class="top-bar">
+    <span>🔴 Limited Time Offer — $99 Single Session or 3 for $299 🔴</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Via Laser Exclusive · Las Vegas, NV</p>
+        <h1>Acne Laser Treatment</h1>
+        <p class="hero-sub">Clear Your Skin & Restore Your Confidence — With Advanced Laser Technology</p>
+        <ul class="hero-bullets">
+          <li>Targets active acne & prevents future breakouts</li>
+          <li>Reduces redness, scarring & post-acne marks</li>
+          <li>Zero downtime · No harsh chemicals · Safe for all skin types</li>
+        </ul>
+        <div class="price-pill">
+          <span class="price-amount">$99</span>
+          <span class="price-divider">or</span>
+          <span class="price-amount">3 for $299</span>
+        </div>
+        <a href="#book" class="btn btn-primary">Book Your Session Now 👇</a>
+        <p class="hero-foot">Pay upon arrival · Appointments filling quickly</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/promo-hero.jpg" alt="Acne laser treatment at Via Laser" />
+      </div>
+    </div>
+  </header>
+
+  <!-- BOOKING ANCHOR -->
+  <section id="book" class="booking">
+    <div class="container">
+      <h2 class="center">Choose a Date & Time for Your Appointment</h2>
+      <p class="section-lead center">Reserve your acne laser session in seconds. Pay upon arrival at our Las Vegas studio.</p>
+
+      <!-- Step indicator -->
+      <ol class="step-indicator" aria-label="Booking steps">
+        <li class="step active" data-step="1"><span>1</span> Date</li>
+        <li class="step" data-step="2"><span>2</span> Time</li>
+        <li class="step" data-step="3"><span>3</span> Your Info</li>
+      </ol>
+
+      <div class="booking-card">
+
+        <!-- STEP 1: Date -->
+        <div class="step-panel active" data-panel="1">
+          <div class="panel-head">
+            <h3 class="panel-title">Choose a Date</h3>
+            <p class="panel-sub">Pick from the next 6 available days at our Las Vegas studio.</p>
+          </div>
+          <div class="day-row" id="dayRow" role="grid"></div>
+          <p class="cal-hint">All times shown are Las Vegas local time.</p>
+        </div>
+
+        <!-- STEP 2: Time -->
+        <div class="step-panel" data-panel="2">
+          <div class="panel-head">
+            <button type="button" class="back-btn" data-back="1">‹ Back</button>
+            <div>
+              <h3 class="panel-title">Choose a Time</h3>
+              <p class="panel-sub" id="selectedDateLabel">Pick a date first</p>
+            </div>
+          </div>
+          <div class="time-slots" id="timeSlots">
+            <div class="slot-grid"></div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Form -->
+        <div class="step-panel" data-panel="3">
+          <div class="panel-head">
+            <button type="button" class="back-btn" data-back="2">‹ Back</button>
+            <div>
+              <h3 class="panel-title">Your Details</h3>
+              <p class="panel-sub">We'll send a confirmation by text and email.</p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="summary">
+              <p class="summary-line"><strong>Appointment:</strong> <span id="summaryDateTime"></span></p>
+              <p class="summary-line"><strong>Service:</strong> Acne Laser Treatment</p>
+            </div>
+
+            <label>
+              Full Name
+              <input type="text" name="name" id="fName" required placeholder="Jane Doe" autocomplete="name" />
+            </label>
+            <label>
+              Phone
+<input type="tel" name="phone" id="fPhone" required placeholder="(725) 772-0948" autocomplete="tel" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" id="fEmail" required placeholder="you@email.com" autocomplete="email" />
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-lg" id="confirmBtn">Confirm My Appointment</button>
+            <p class="form-foot">Pay upon arrival · You'll receive a confirmation by text & email</p>
+          </form>
+
+          <div class="booking-error" id="bookingError" hidden>
+            <p>We couldn't complete your booking just now. Please call <a href="tel:+17257720948">(725) 772-0948</a> or try again.</p>
+            <p class="err-detail" style="font-size:0.78rem; opacity:0.7; margin-top:6px;"></p>
+          </div>
+        </div>
+
+        <!-- STEP 4: Success -->
+        <div class="step-panel" data-panel="4">
+          <div class="booking-success">
+            <div class="success-icon">✓</div>
+            <h3>Appointment Confirmed!</h3>
+            <p id="successText">Thank you. We'll see you soon at our Las Vegas studio.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE INTRO -->
+  <section class="service">
+    <div class="container service-grid">
+      <div>
+        <p class="eyebrow">Via Laser Signature</p>
+        <h2>The Acne Laser Treatment</h2>
+        <p>A safe, advanced laser treatment clinically proven to reduce active acne, calm inflammation, and fade post-acne scars. Using targeted laser energy, we treat breakouts at the source — reducing oil production, killing acne-causing bacteria, and stimulating collagen for smoother, clearer skin. No downtime, no harsh chemicals, just real results.</p>
+        <a href="#book" class="btn btn-outline">Reserve My Spot 👇</a>
+      </div>
+      <div class="service-image">
+        <img src="images/spa-interior.jpg" alt="Via Laser treatment room in Las Vegas, Nevada" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="container benefits-grid">
+      <div class="benefits-image">
+        <img src="images/benefits-treatment.jpg" alt="Acne laser treatment in progress" />
+      </div>
+      <div>
+        <h2>Why Choose Acne Laser Treatment</h2>
+        <ul class="check-list">
+          <li>Reduces active acne breakouts at the source</li>
+          <li>Fades post-acne scars, dark spots & redness</li>
+          <li>Calms inflammation without drying out your skin</li>
+          <li>Regulates oil production for longer-lasting clarity</li>
+          <li>Safe, gentle, and suitable for all skin types</li>
+          <li>Zero downtime — return to your day immediately</li>
+        </ul>
+        <a href="#book" class="btn btn-primary">Book Now 👇</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results">
+    <div class="container">
+      <p class="eyebrow center">See the Transformation</p>
+      <h2 class="center">Real Acne Laser Results</h2>
+      <p class="section-lead center">Clearer, calmer, more confident skin — captured in our Las Vegas studio.</p>
+      <div class="results-grid">
+        <figure class="result-card">
+          <img src="images/transformation-1.jpg" alt="Clear, smooth skin after acne laser treatment" />
+          <figcaption>
+            <span class="result-tag">Single $99 Session</span>
+            Noticeably reduced breakouts, less redness, and smoother texture after just one Via Laser Acne Laser session.
+          </figcaption>
+        </figure>
+        <figure class="result-card">
+          <img src="images/transformation-2.jpg" alt="Clear complexion after a full acne laser series" />
+          <figcaption>
+            <span class="result-tag">3-Session Package · $299</span>
+            Dramatically clearer skin, minimized scarring, and a more even tone after a complete laser series.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING CTA -->
+  <section class="price-cta">
+    <div class="container center">
+      <p class="eyebrow light">Exclusive Deal · Limited Time Offer</p>
+      <h2>What $99 Can Do for You</h2>
+      <p class="section-lead light">Experience the Via Laser acne laser treatment for only <strong>$99</strong> for a single session — or save with <strong>3 sessions for $299</strong>. Appointments are limited, so reserve yours today.</p>
+      <a href="#book" class="btn btn-light">Book Your Laser Session 👇</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">About Us</p>
+        <h2>Welcome to Via Laser</h2>
+        <p>At Via Laser, we blend advanced laser technology with the calm of a luxury studio to deliver visible, lasting results. Our signature acne laser treatment is designed for clients who want clearer, smoother skin without harsh chemicals or downtime. Every session is personalized, relaxing, and built around your skin's unique needs.</p>
+        <p>Visit us at our Cimarron Rd studio in Las Vegas and discover the confidence of clear skin.</p>
+      </div>
+      <div class="about-image">
+        <img src="images/spa-interior.jpg" alt="Via Laser treatment studio in Las Vegas" />
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    <div class="container center">
+      <p class="eyebrow">Testimonial</p>
+      <blockquote>
+        "After just three sessions my skin is the clearest it's been in years. No more covering up with makeup — I finally feel confident in my own skin. Via Laser changed everything."
+      </blockquote>
+      <cite>— Monica S., Las Vegas</cite>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="container">
+      <p class="eyebrow center">5-Star Google Reviews</p>
+      <h2 class="center">Real Clients, Real Results</h2>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"My acne was out of control before starting treatments here. After just one session I saw a huge difference — after three my skin is completely clear. Life-changing."</p>
+          <span class="reviewer">— Sarah L.</span>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"The studio is gorgeous and the laser treatments are the real deal. My acne scars have faded so much and my skin looks smoother than it has in years."</p>
+          <span class="reviewer">— Dana K.</span>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best acne treatment in Las Vegas by a mile. Professional team, beautiful space, and visible results after one visit. No more breakouts for me!"</p>
+          <span class="reviewer">— Carolina P.</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container center">
+      <h2>Your Clear Skin Journey Starts Today</h2>
+      <p class="section-lead">Claim your $99 session or save with a 3-session package before appointments run out.</p>
+      <a href="#book" class="btn btn-primary btn-lg">Book My Appointment 👇</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Location</h3>
+        <p>9345 S Cimarron Rd<br />Las Vegas, NV 89178</p>
+      </div>
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:Info@vialaserlv.com">Info@vialaserlv.com</a></p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <p><a href="tel:+17257720948">(725) 772-0948</a></p>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; <span id="year"></span> Via Laser. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Track Lead when any "Book" CTA is clicked (top-of-funnel signal)
+    document.querySelectorAll('a[href="#book"]').forEach(function (a) {
+      a.addEventListener('click', function () { if (window.fbq) fbq('track', 'InitiateCheckout'); });
+    });
+  </script>
+
+  <!--
+    SECURITY NOTE: API key below is exposed to anyone viewing source.
+    For production, proxy these calls through a server (Cloudflare Worker / Vercel function)
+    so the PIT stays private. Anyone with this token can act on your GHL location.
+  -->
+  <script>
+    const GHL = {
+      locationId: 'Vyf83R6wePOPyk0gF6Hq',
+      calendarId: 'DxykVN6WeeXjpb3pZG8C',
+      userId:     '2tQreqXcDpaAiSBqlK7T',
+      apiKey:     'pit-4c4be7ba-5e34-4213-9dcb-135d6df302c4',
+      apiBase:    'https://services.leadconnectorhq.com',
+      version:    '2021-07-28',
+    };
+
+    /* ---------------- Calendar ---------------- */
+    const WEEKDAYS_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const SLOT_DURATION_MIN = 60;          // 1-hour appointments
+    const CLOSED_WEEKDAYS = [0, 6];        // 0 = Sunday, 6 = Saturday — closed weekends
+    const TIMEZONE = 'America/Los_Angeles';   // Las Vegas, NV
+    const SLOT_GROUPS = [
+      { label: 'Morning',   hours: [9, 10, 11] },
+      { label: 'Afternoon', hours: [12, 13, 14, 15, 16, 17] },
+    ];
+    const DAYS_TO_SHOW = 6;    // 2 rows × 3 per row
+
+    let windowStart = null;                // first available date in current view
+    let selectedDate = null;               // Date object
+    let selectedTime = null;               // string e.g. "10:00 AM"
+
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    const dayRow      = document.getElementById('dayRow');
+    const dateLabel   = document.getElementById('selectedDateLabel');
+    const slotsPanel  = document.getElementById('timeSlots');
+    const slotGrid    = slotsPanel ? slotsPanel.querySelector('.slot-grid') : null;
+    const contactForm = document.getElementById('contactForm');
+    const summaryDT   = document.getElementById('summaryDateTime');
+    const errorBox    = document.getElementById('bookingError');
+    const successText = document.getElementById('successText');
+    const confirmBtn  = document.getElementById('confirmBtn');
+    const panels      = document.querySelectorAll('.step-panel');
+
+    function showPanel(n) {
+      panels.forEach(p => p.classList.toggle('active', parseInt(p.dataset.panel,10) === n));
+      setStep(n);
+      const card = document.querySelector('.booking-card');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    document.querySelectorAll('.back-btn').forEach(b => {
+      b.addEventListener('click', () => showPanel(parseInt(b.dataset.back, 10)));
+    });
+
+    function nextOpenDate(from) {
+      const d = new Date(from);
+      while (CLOSED_WEEKDAYS.includes(d.getDay())) d.setDate(d.getDate() + 1);
+      return d;
+    }
+
+    function buildDayWindow(start) {
+      const days = [];
+      const d = new Date(start);
+      while (days.length < DAYS_TO_SHOW) {
+        if (!CLOSED_WEEKDAYS.includes(d.getDay())) days.push(new Date(d));
+        d.setDate(d.getDate() + 1);
+      }
+      return days;
+    }
+
+    windowStart = nextOpenDate(today);
+
+    function renderCalendar() {
+      const days = buildDayWindow(windowStart);
+      dayRow.innerHTML = '';
+      days.forEach(dateObj => {
+        const cell = document.createElement('button');
+        cell.type = 'button';
+        cell.className = 'day-pill';
+        const isToday = dateObj.getTime() === today.getTime();
+        const isSelected = selectedDate && dateObj.getTime() === selectedDate.getTime();
+        if (isToday) cell.classList.add('today');
+        if (isSelected) cell.classList.add('selected');
+        cell.innerHTML = `
+          <span class="dp-dow">${WEEKDAYS_SHORT[dateObj.getDay()]}</span>
+          <span class="dp-num">${dateObj.getDate()}</span>
+          <span class="dp-mon">${MONTHS_SHORT[dateObj.getMonth()]}</span>
+        `;
+        cell.addEventListener('click', () => selectDate(dateObj));
+        dayRow.appendChild(cell);
+      });
+
+    }
+
+    function fmtSlotTime(iso) {
+      return new Date(iso).toLocaleTimeString('en-US', {
+        hour: 'numeric', minute: '2-digit', hour12: true, timeZone: TIMEZONE
+      });
+    }
+
+    // Build an ISO string for `hour:00` on the selected date in the given timezone.
+    function isoInTz(date, hour, tz) {
+      const guess = new Date(Date.UTC(
+        date.getFullYear(), date.getMonth(), date.getDate(), hour, 0, 0
+      ));
+      const dtf = new Intl.DateTimeFormat('en-US', {
+        timeZone: tz, hour12: false,
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      });
+      const parts = dtf.formatToParts(guess).reduce((a, p) => {
+        if (p.type !== 'literal') a[p.type] = p.value; return a;
+      }, {});
+      // Some locales return hour=24 for midnight; normalize.
+      let h = parseInt(parts.hour, 10);
+      if (h === 24) h = 0;
+      const asUTC = Date.UTC(parts.year, parts.month - 1, parts.day, h, parts.minute, parts.second);
+      const offsetMs = asUTC - guess.getTime();
+      return new Date(guess.getTime() - offsetMs).toISOString();
+    }
+
+    function renderTimeSlots() {
+      if (!selectedDate || !slotGrid) return;
+
+      const isToday = selectedDate.getTime() === today.getTime();
+      const cutoff  = Date.now() + 60 * 60 * 1000;  // 1h lead time
+
+      slotGrid.innerHTML = '';
+      let visible = 0;
+
+      SLOT_GROUPS.forEach(group => {
+        const items = group.hours
+          .map(h => ({ hour: h, iso: isoInTz(selectedDate, h, TIMEZONE) }))
+          .filter(it => !isToday || new Date(it.iso).getTime() > cutoff);
+        if (!items.length) return;
+
+        const heading = document.createElement('p');
+        heading.className = 'slot-group-label';
+        heading.textContent = group.label;
+        slotGrid.appendChild(heading);
+
+        const row = document.createElement('div');
+        row.className = 'slot-row';
+        items.forEach(it => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'slot';
+          btn.dataset.iso = it.iso;
+          btn.textContent = fmtSlotTime(it.iso);
+          btn.addEventListener('click', () => selectTime(it.iso, btn));
+          row.appendChild(btn);
+          visible++;
+        });
+        slotGrid.appendChild(row);
+      });
+
+      if (visible === 0) {
+        slotGrid.innerHTML = '<p class="no-slots">No more openings today — please choose another day.</p>';
+      }
+    }
+
+    function selectDate(d) {
+      selectedDate = d;
+      selectedTime = null;
+      renderCalendar();
+
+      const opts = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+      dateLabel.textContent = d.toLocaleDateString(undefined, opts);
+
+      errorBox.hidden = true;
+      renderTimeSlots();
+      showPanel(2);
+    }
+
+    function selectTime(slotIso, btn) {
+      selectedTime = slotIso;
+      document.querySelectorAll('.slot').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+
+      const opts = { weekday: 'long', month: 'long', day: 'numeric' };
+      summaryDT.textContent = `${selectedDate.toLocaleDateString(undefined, opts)} at ${fmtSlotTime(slotIso)}`;
+
+      showPanel(3);
+    }
+
+    function setStep(n) {
+      document.querySelectorAll('.step').forEach(s => {
+        const sn = parseInt(s.dataset.step, 10);
+        s.classList.toggle('active', sn === n);
+        s.classList.toggle('done', sn < n);
+      });
+    }
+
+    renderCalendar();
+
+    // Auto-refresh time slots every minute so today's list stays current
+    setInterval(() => {
+      if (selectedDate && selectedDate.getTime() === today.getTime() && !selectedTime) {
+        renderTimeSlots();
+      }
+    }, 60 * 1000);
+
+    /* ---------------- GHL submission ---------------- */
+    async function ghlFetch(path, body) {
+      const res = await fetch(GHL.apiBase + path, {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + GHL.apiKey,
+          'Version': GHL.version,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.message || ('HTTP ' + res.status));
+      return data;
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!selectedDate || !selectedTime) return;
+
+      confirmBtn.disabled = true;
+      confirmBtn.textContent = 'Booking…';
+      errorBox.hidden = true;
+
+      const fullName = document.getElementById('fName').value.trim();
+      const [firstName, ...rest] = fullName.split(' ');
+      const lastName = rest.join(' ') || '-';
+      const email    = document.getElementById('fEmail').value.trim();
+      const phone    = document.getElementById('fPhone').value.trim();
+
+      // selectedTime now holds the exact ISO slot returned by GHL's /free-slots
+      const startISO = selectedTime;
+      const endISO   = new Date(new Date(startISO).getTime() + SLOT_DURATION_MIN * 60000).toISOString();
+
+      try {
+        // 1) Upsert contact
+        const contactRes = await ghlFetch('/contacts/upsert', {
+          locationId: GHL.locationId,
+          firstName, lastName, email, phone,
+          source: 'Acne Laser Treatment LP',
+          tags: ['Acne Laser'],
+        });
+        const contactId = contactRes.contact?.id || contactRes.id;
+
+        // 2) Book appointment on calendar
+        await ghlFetch('/calendars/events/appointments', {
+          calendarId: GHL.calendarId,
+          locationId: GHL.locationId,
+          contactId,
+          assignedUserId: GHL.userId,
+          startTime: startISO,
+          endTime:   endISO,
+          title:     `${fullName} — Acne Laser Treatment`,
+          appointmentStatus: 'confirmed',
+        });
+
+        if (window.fbq) fbq('track', 'Lead');
+        successText.textContent =
+          `You're booked for ${summaryDT.textContent}. A confirmation has been sent to ${email}.`;
+        showPanel(4);
+      } catch (err) {
+        console.error('GHL booking error:', err);
+        const detail = errorBox.querySelector('.err-detail');
+        if (detail) detail.textContent = (err && err.message) ? err.message : '';
+        errorBox.hidden = false;
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = 'Confirm My Appointment';
+      }
+    });
+  </script>
+</body>
+</html>
