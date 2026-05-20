@@ -79,7 +79,7 @@
         <div class="step-panel active" data-panel="1">
           <div class="panel-head">
             <h3 class="panel-title">Choose a Date</h3>
-            <p class="panel-sub">Pick from the next 6 available days at our Las Vegas studio.</p>
+            <p class="panel-sub">Pick from the next 12 available days at our Las Vegas studio.</p>
           </div>
           <div class="day-row" id="dayRow" role="grid"></div>
           <p class="cal-hint">All times shown are Las Vegas local time.</p>
@@ -121,7 +121,7 @@
             </label>
             <label>
               Phone
-<input type="tel" name="phone" id="fPhone" required placeholder="(725) 772-0948" autocomplete="tel" />
+              <input type="tel" name="phone" id="fPhone" required placeholder="(725) 772-0948" autocomplete="tel" />
             </label>
             <label>
               Email
@@ -334,10 +334,10 @@
     const CLOSED_WEEKDAYS = [0, 6];        // 0 = Sunday, 6 = Saturday — closed weekends
     const TIMEZONE = 'America/Los_Angeles';   // Las Vegas, NV
     const SLOT_GROUPS = [
-      { label: 'Morning',   hours: [9, 10, 11] },
-      { label: 'Afternoon', hours: [12, 13, 14, 15, 16, 17] },
+      { label: 'Morning',   hours: [9, 10] },
+      { label: 'Afternoon', hours: [12, 13, 14, 15, 16] },
     ];
-    const DAYS_TO_SHOW = 6;    // 2 rows × 3 per row
+    const DAYS_TO_SHOW = 12;    // 4 rows × 3 per row
 
     let windowStart = null;                // first available date in current view
     let selectedDate = null;               // Date object
