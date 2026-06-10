@@ -22,9 +22,11 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1178133073434960');
-    fbq('track', 'PageView');
+    fbq('init', '1111462304327946');
+    fbq('trackSingle', '1178133073434960', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1178133073434960&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1111462304327946&ev=PageView&noscript=1"/></noscript>
 
   <!-- GoHighLevel form embed script -->
   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
@@ -310,7 +312,7 @@
 
     // Track Lead when any "Book" CTA is clicked (top-of-funnel signal)
     document.querySelectorAll('a[href="#book"]').forEach(function (a) {
-      a.addEventListener('click', function () { if (window.fbq) fbq('track', 'InitiateCheckout'); });
+      a.addEventListener('click', function () { if (window.fbq) fbq('trackSingle', '1178133073434960', 'InitiateCheckout'); });
     });
   </script>
 
@@ -574,7 +576,23 @@
           appointmentStatus: 'confirmed',
         });
 
-        if (window.fbq) fbq('track', 'Lead');
+        var eventId = 'sch_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+        if (window.fbq) {
+          fbq('trackSingle', '1178133073434960', 'Lead');
+          fbq('trackSingle', '1111462304327946', 'Schedule', {}, { eventID: eventId });
+        }
+        fetch('/api/capi', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            eventId: eventId,
+            email: email,
+            phone: phone,
+            eventSourceUrl: window.location.href,
+            fbp: (document.cookie.match(/_fbp=([^;]+)/) || [])[1],
+            fbc: (document.cookie.match(/_fbc=([^;]+)/) || [])[1],
+          }),
+        }).catch(function () {});
         successText.textContent =
           `You're booked for ${summaryDT.textContent}. A confirmation has been sent to ${email}.`;
         showPanel(4);
