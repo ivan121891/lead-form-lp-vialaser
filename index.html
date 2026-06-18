@@ -577,6 +577,7 @@
         if (window.fbq) {
           fbq('trackSingle', '1178133073434960', 'Lead');
           fbq('trackSingle', '1111462304327946', 'Schedule', {}, { eventID: eventId });
+          fbq('trackSingle', '1111462304327946', 'CompleteRegistration', {}, { eventID: eventId });
         }
         fetch('/api/capi', {
           method: 'POST',
